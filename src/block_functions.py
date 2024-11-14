@@ -27,7 +27,7 @@ def block_to_htmlnode(block_type, block):
         list_items = []
         
         for item in items:
-            item_text = item.lstrip("* -").strip()
+            item_text = item[2:]
             li_node = ParentNode("li",text_to_children(item_text))
             list_items.append(li_node)
         
